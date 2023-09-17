@@ -3,7 +3,7 @@
 Project where I used SQL queries and operations intended to clean and prepare data within a database referred to as "NashvilleHousing." Below is an overview of the key steps and tasks performed in this code:
 
 1.Data Upload Validation:
-The initial step involves selecting all records from the "NashvilleHousing" table, for data validation purposes after an initial data upload.
+- The initial step involves selecting all records from the "NashvilleHousing" table, for data validation purposes after an initial data upload.
 
 2.Standardize Date Format:
 This section focuses on the "SaleDate" column, aiming to standardize its date format.
