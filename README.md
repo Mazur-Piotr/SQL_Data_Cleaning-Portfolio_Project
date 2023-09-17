@@ -12,25 +12,25 @@ It then updates the "SaleDate" column in the table to reflect the standardized d
 Lastly, it checks the results of the date format conversion.<br />
 
 3. Populate Property Address Data:
-<br />This part of the code is dedicated to dealing with missing "PropertyAddress" values.<br />
-<br />It identifies rows where "PropertyAddress" is NULL.<br />
-<br />It supplements the NULL values by copying corresponding values from rows with the same "ParcelID" using a SQL JOIN operation.<br />
+<br />This part of the code is dedicated to dealing with missing "PropertyAddress" values.
+It identifies rows where "PropertyAddress" is NULL.
+It supplements the NULL values by copying corresponding values from rows with the same "ParcelID" using a SQL JOIN operation.<br />
 
 4. Breaking Out the Addresses into Individual Columns (Address, City, State):
-<br />Here, the code splits the "PropertyAddress" column into separate columns for address and city using the SUBSTRING function.<br />
-<br />New columns, "PropertySplitAddress" and "PropertySplitCity," are created to store the separated address components.<br />
-<br />A similar process is applied to the "OwnerAddress" column, breaking it into separate columns for address, city, and state using the PARSENAME function.<br />
+<br />Here, the code splits the "PropertyAddress" column into separate columns for address and city using the SUBSTRING function.
+New columns, "PropertySplitAddress" and "PropertySplitCity," are created to store the separated address components.
+A similar process is applied to the "OwnerAddress" column, breaking it into separate columns for address, city, and state using the PARSENAME function.<br />
 
 5. Change Y and N to YES and NO in 'Sold as Vacant' Field:
-<br />This section aims to standardize the values in the "SoldAsVacant" column.<br />
-<br />It selects distinct values from the column and then replaces 'Y' with 'Yes' and 'N' with 'No' using a CASE statement.<br />
-<br />The "SoldAsVacant" column is updated with these standardized values.<br />
+<br />This section aims to standardize the values in the "SoldAsVacant" column.
+It selects distinct values from the column and then replaces 'Y' with 'Yes' and 'N' with 'No' using a CASE statement.
+The "SoldAsVacant" column is updated with these standardized values.<br />
 
 6. Remove Duplicates:
-<br />This part involves identifying and deleting duplicate records based on specific columns such as "ParcelID," "PropertyAddress," "SalePrice," "SaleDate," and "LegalReference."<br />
-<br />The code uses a common table expression (CTE) to number rows and subsequently deletes duplicates, keeping only one instance of each.<br />
+<br />This part involves identifying and deleting duplicate records based on specific columns such as "ParcelID," "PropertyAddress," "SalePrice," "SaleDate," and "LegalReference."
+The code uses a common table expression (CTE) to number rows and subsequently deletes duplicates, keeping only one instance of each.<br />
 
 8. Delete Unused Columns:
-<br />The final section of the code removes certain columns from the "NashvilleHousing" table to presumably streamline and clean the dataset.<br />
+<br />The final section of the code removes certain columns from the "NashvilleHousing" table to presumably streamline and clean the dataset.
 
 <br />Overall, this code provides a structured approach to data cleaning and transformation tasks in SQL, focusing on issues like missing values, date format standardization, splitting address information, standardizing categorical values, and removing duplicate records. It can be used as a guide for cleaning and preparing the "NashvilleHousing" dataset for further analysis.<br />
