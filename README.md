@@ -2,7 +2,7 @@
 
 Project where I used SQL queries and operations intended to clean and prepare data within a database referred to as "NashvilleHousing." Below is an overview of the key steps and tasks performed in this code:
 
-1. Data Upload Validation:
+1.Data Upload Validation:
 The initial step involves selecting all records from the "NashvilleHousing" table, for data validation purposes after an initial data upload.
 
 2.Standardize Date Format:
@@ -16,7 +16,7 @@ This part of the code is dedicated to dealing with missing "PropertyAddress" val
 It identifies rows where "PropertyAddress" is NULL.
 It supplements the NULL values by copying corresponding values from rows with the same "ParcelID" using a SQL JOIN operation.
 
-4. Breaking Out the Addresses into Individual Columns (Address, City, State):
+4.Breaking Out the Addresses into Individual Columns (Address, City, State):
 Here, the code splits the "PropertyAddress" column into separate columns for address and city using the SUBSTRING function.
 New columns, "PropertySplitAddress" and "PropertySplitCity," are created to store the separated address components.
 A similar process is applied to the "OwnerAddress" column, breaking it into separate columns for address, city, and state using the PARSENAME function.
