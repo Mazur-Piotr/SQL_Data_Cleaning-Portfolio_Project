@@ -3,12 +3,12 @@
 Cleaning Data in SQL Queries
 
 */
-
+-----------------------------------------------------------------------------------------------------------------------------------------------
 -- DATA UPLOAD VALIDATION
 
 SELECT *
 FROM [PortfolioProject - Data Cleaning].dbo.NashvilleHousing
-
+-----------------------------------------------------------------------------------------------------------------------------------------------
 -- STANDARIZE DATE FORMAT
 
 -- Generate the Expected Output
@@ -25,7 +25,7 @@ SET SaleDate = CONVERT(Date,SaleDate)
 
 SELECT SaleDateConverted, CONVERT(Date,SaleDate)
 FROM [PortfolioProject - Data Cleaning].dbo.NashvilleHousing
-
+-----------------------------------------------------------------------------------------------------------------------------------------------
 -- POPULATE PROPERTY ADDRESS DATA
 
 -- Address Data Overview
@@ -55,7 +55,7 @@ JOIN [PortfolioProject - Data Cleaning].dbo.NashvilleHousing AS b
 	AND a.[UniqueID ] <> b.[UniqueID ]
 WHERE a.PropertyAddress IS NULL
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------
 -- BREAKING OUT THE ADDRESSES INTO INDIVIDUAL COLUMNS (ADRESS, CITY, STATE)
 
 -- Breaking PropertyAddress Into Separate Columns Using SUBSTRING
@@ -116,7 +116,7 @@ SET OwnerSplitState = PARSENAME(Replace(OwnerAddress, ',', '.') ,1)
 
 SELECT *
 FROM [PortfolioProject - Data Cleaning].dbo.NashvilleHousing
-
+-----------------------------------------------------------------------------------------------------------------------------------------------
 -- CHANGE Y AND N TO YES AND NO IN 'Sold as Vacant' field
 
 SELECT Distinct(SoldAsVacant), Count(SoldAsVacant)
@@ -136,7 +136,7 @@ SET SoldAsVacant = CASE WHEN SoldAsVacant = 'Y' THEN 'Yes'
 	   WHEN SoldAsVacant = 'N' THEN 'No'
 	   ELSE SoldAsVacant  
 	   END
-
+-----------------------------------------------------------------------------------------------------------------------------------------------
 -- REMOVE DUPLICATES 
 -- Checking the Number of Duplicates in the Tabel
 
@@ -178,7 +178,7 @@ FROM [PortfolioProject - Data Cleaning].dbo.NashvilleHousing
 DELETE
 FROM RowNumCTE
 WHERE row_num > 1
-
+-----------------------------------------------------------------------------------------------------------------------------------------------
 -- DELETE UNUSED COLUMNS
 
 SELECT *
