@@ -173,7 +173,7 @@ DELETE
 FROM RowNumCTE
 WHERE row_num > 1
 
--- DELETE USUNED COLUMNS
+-- DELETE UNUSED COLUMNS
 
 SELECT *
 FROM [PortfolioProject - Data Cleaning].dbo.NashvilleHousing
