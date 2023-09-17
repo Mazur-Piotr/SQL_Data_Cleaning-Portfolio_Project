@@ -1,3 +1,9 @@
+/*
+
+Cleaning Data in SQL Queries
+
+*/
+
 -- DATA UPLOAD VALIDATION
 
 SELECT *
