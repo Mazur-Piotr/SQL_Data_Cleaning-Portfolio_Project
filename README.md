@@ -1,36 +1,38 @@
 # SQL_Data_Cleaning-Portfolio_Project
 
-Project where I used SQL queries and operations intended to clean and prepare data within a database referred to as "NashvilleHousing." Below is an overview of the key steps and tasks performed in this code:
+## Overview
+This project focuses on cleaning and transforming data using SQL queries. It demonstrates various data cleaning and transformation techniques applied to a dataset of Nashville housing records.
 
-1. Data Upload Validation:
-<br />The initial step involves selecting all records from the "NashvilleHousing" table, for data validation purposes after an initial data upload.<br />
+### Data Upload Validation:
+The initial step involves selecting all records from the "NashvilleHousing" table, for data validation purposes after an initial data upload.
 
-2. Standardize Date Format:
-<br />This section focuses on the "SaleDate" column, aiming to standardize its date format.
-It first selects the "SaleDate" and its converted form using the CONVERT function.
-It then updates the "SaleDate" column in the table to reflect the standardized date format.
-Lastly, it checks the results of the date format conversion.<br />
+### Data Cleaning Steps
+### 1. Standardize Date Format
+Date formats are standardized to ensure consistency in the dataset.
+### 2. Populate Property Address Data
+Missing property addresses are supplemented using corresponding values from rows with the same ParcelID.
+### 3. Breaking Out Addresses
+Property and owner addresses are split into separate columns for address, city, and state, making the data more structured.
+### 4. Change 'Y' and 'N' to 'Yes' and 'No'
+The 'Sold as Vacant' field is cleaned by replacing 'Y' and 'N' with 'Yes' and 'No' for clarity.
+### 5. Remove Duplicates
+Duplicate records are identified and removed based on specific columns, ensuring data accuracy.
+### 6. Delete Unused Columns
+Columns like OwnerAddress, TaxDistrict, PropertyAddress, and SaleDate that are no longer needed are removed to streamline the dataset.
 
-3. Populate Property Address Data:
-<br />This part of the code is dedicated to dealing with missing "PropertyAddress" values.
-It identifies rows where "PropertyAddress" is NULL.
-It supplements the NULL values by copying corresponding values from rows with the same "ParcelID" using a SQL JOIN operation.<br />
+## Usage
+This code provides a structured approach to data cleaning and transformation tasks in SQL, focusing on issues like missing values, date format standardization, splitting address information, standardizing categorical values, and removing duplicate records. It can be used as a guide for cleaning and preparing the "NashvilleHousing" dataset for further analysis.
 
-4. Breaking Out the Addresses into Individual Columns (Address, City, State):
-<br />Here, the code splits the "PropertyAddress" column into separate columns for address and city using the SUBSTRING function.
-New columns, "PropertySplitAddress" and "PropertySplitCity," are created to store the separated address components.
-A similar process is applied to the "OwnerAddress" column, breaking it into separate columns for address, city, and state using the PARSENAME function.<br />
 
-5. Change Y and N to YES and NO in 'Sold as Vacant' Field:
-<br />This section aims to standardize the values in the "SoldAsVacant" column.
-It selects distinct values from the column and then replaces 'Y' with 'Yes' and 'N' with 'No' using a CASE statement.
-The "SoldAsVacant" column is updated with these standardized values.<br />
 
-6. Remove Duplicates:
-<br />This part involves identifying and deleting duplicate records based on specific columns such as "ParcelID," "PropertyAddress," "SalePrice," "SaleDate," and "LegalReference."
-The code uses a common table expression (CTE) to number rows and subsequently deletes duplicates, keeping only one instance of each.<br />
 
-8. Delete Unused Columns:
-<br />The final section of the code removes certain columns from the "NashvilleHousing" table to presumably streamline and clean the dataset.
 
-<br />Overall, this code provides a structured approach to data cleaning and transformation tasks in SQL, focusing on issues like missing values, date format standardization, splitting address information, standardizing categorical values, and removing duplicate records. It can be used as a guide for cleaning and preparing the "NashvilleHousing" dataset for further analysis.<br />
+
+
+
+
+
+
+This project provides a clear example of SQL data cleaning techniques that can be applied to similar datasets. It serves as a reference for data cleaning and preparation in SQL.
+
+
