@@ -3,10 +3,10 @@
 ## Overview
 This project focuses on cleaning and transforming data using SQL queries. It demonstrates various data cleaning and transformation techniques applied to a dataset of Nashville housing records.
 
-### Data Upload Validation:
+## Data Upload Validation:
 The initial step involves selecting all records from the "NashvilleHousing" table, for data validation purposes after an initial data upload.
 
-### Data Cleaning Steps
+## Data Cleaning Steps
 ### 1. Standardize Date Format
 Date formats are standardized to ensure consistency in the dataset.
 ### 2. Populate Property Address Data
