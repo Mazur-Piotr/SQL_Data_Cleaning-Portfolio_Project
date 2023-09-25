@@ -30,9 +30,3 @@ This code provides a structured approach to data cleaning and transformation tas
 
 
 
-
-
-
-This project provides a clear example of SQL data cleaning techniques that can be applied to similar datasets. It serves as a reference for data cleaning and preparation in SQL.
-
-
