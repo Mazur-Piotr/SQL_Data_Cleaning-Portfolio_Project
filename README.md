@@ -3,6 +3,13 @@
 ## Overview
 This project focuses on cleaning and transforming data using SQL queries. It demonstrates various data cleaning and transformation techniques applied to a dataset of Nashville housing records.
 
+## Dataset
+Dataset Source: Kaggle -
+https://www.kaggle.com/datasets/tmthyjames/nashville-housing-data
+
+The dataset consists of Nasvhille housing market. 
+
+
 ## Data Upload Validation:
 The initial step involves selecting all records from the "NashvilleHousing" table, for data validation purposes after an initial data upload.
 
