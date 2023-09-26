@@ -7,9 +7,9 @@ This project focuses on cleaning and transforming data using SQL queries. It dem
 The initial step involves selecting all records from the "NashvilleHousing" table, for data validation purposes after an initial data upload.
 
 ## Data Cleaning Steps
-1. Standardize Date Format:
+#### 1. Standardize Date Format:
 - Date formats are standardized to ensure consistency in the dataset.
-2. Populate Property Address Data:
+#### 2. Populate Property Address Data:
 - Missing property addresses are supplemented using corresponding values from rows with the same ParcelID.
 3. Breaking Out Addresses:
 - Property and owner addresses are split into separate columns for address, city, and state, making the data more structured.
