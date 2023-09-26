@@ -20,6 +20,9 @@ The initial step involves selecting all records from the "NashvilleHousing" tabl
 #### 6. Delete Unused Columns:
 - Columns like OwnerAddress, TaxDistrict, PropertyAddress, and SaleDate that are no longer needed are removed to streamline the dataset.
 
+  ![image](https://github.com/Mazur-Piotr/SQL_Data_Cleaning-Portfolio_Project/assets/138219323/793eafa0-7fa7-4700-9cb1-6ab0f4162326)
+
+
 ## Usage
 This code provides a structured approach to data cleaning and transformation tasks in SQL, focusing on issues like missing values, date format standardization, splitting address information, standardizing categorical values, and removing duplicate records. It can be used as a guide for cleaning and preparing the "NashvilleHousing" dataset for further analysis.
 
