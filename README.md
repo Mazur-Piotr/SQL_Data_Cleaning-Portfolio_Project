@@ -11,13 +11,13 @@ The initial step involves selecting all records from the "NashvilleHousing" tabl
 - Date formats are standardized to ensure consistency in the dataset.
 #### 2. Populate Property Address Data:
 - Missing property addresses are supplemented using corresponding values from rows with the same ParcelID.
-3. Breaking Out Addresses:
+#### 3. Breaking Out Addresses:
 - Property and owner addresses are split into separate columns for address, city, and state, making the data more structured.
-4. Change 'Y' and 'N' to 'Yes' and 'No':
+#### 4. Change 'Y' and 'N' to 'Yes' and 'No':
 - The 'Sold as Vacant' field is cleaned by replacing 'Y' and 'N' with 'Yes' and 'No' for clarity.
-5. Remove Duplicates:
+#### 5. Remove Duplicates:
 - Duplicate records are identified and removed based on specific columns, ensuring data accuracy.
-6. Delete Unused Columns:
+#### 6. Delete Unused Columns:
 - Columns like OwnerAddress, TaxDistrict, PropertyAddress, and SaleDate that are no longer needed are removed to streamline the dataset.
 
 ## Usage
