@@ -8,11 +8,11 @@ The initial step involves selecting all records from the "NashvilleHousing" tabl
 
 ## Data Cleaning Steps
 #### 1. Standardize Date Format:
-- Date formats are standardized to ensure consistency in the dataset.
+- Date formats are standardized to ensure consistency in the dataset. Previous date format included time e.g. '00:00:00 2013-04-09' converted to '2013-04-09'
 #### 2. Populate Property Address Data:
-- Missing property addresses are supplemented using corresponding values from rows with the same ParcelID.
+- Missing property addresses are supplemented using corresponding values from rows with the same ParcelID. After analysing the dataset, I concluded that rows with the same ParcelID have also the same addres, which allowed me to supplement the dataset.
 #### 3. Breaking Out Addresses:
-- Property and owner addresses are split into separate columns for address, city, and state, making the data more structured.
+- Property and owner addresses are split into separate columns for address, city, and state, making the data more structured. Splited columns are easier to effectively analyse. 
 #### 4. Change 'Y' and 'N' to 'Yes' and 'No':
 - The 'Sold as Vacant' field is cleaned by replacing 'Y' and 'N' with 'Yes' and 'No' for clarity.
 #### 5. Remove Duplicates:
